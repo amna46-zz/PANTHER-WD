@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Whiskey | Bot Hub</title>
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com">
+    
+    <style>
+        :root {
+            --glass-bg: rgba(255, 255, 255, 0.05);
+            --glass-border: rgba(255, 255, 255, 0.1);
+            --accent: #ff9d00;
+            --text: #ffffff;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', sans-serif;
+            background: #0a0a0a;
+            color: var(--text);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            overflow-x: hidden;
+        }
+
+        /* Animated background blur */
+        .circle {
+            position: absolute;
+            border-radius: 50%;
+            filter: blur(80px);
+            z-index: -1;
+            animation: float 10s infinite alternate;
+        }
+        .circle-1 { width: 300px; height: 300px; background: #4a00e0; top: 10%; left: 5%; }
+        .circle-2 { width: 400px; height: 400px; background: #8e2de2; bottom: 10%; right: 5%; opacity: 0.6; }
+
+        @keyframes float {
+            from { transform: translateY(0); }
+            to { transform: translateY(40px); }
+        }
+
+        .container {
+            max-width: 1100px;
+            width: 90%;
+            text-align: center;
+            padding: 40px 0;
+        }
+
+        header h1 { font-size: 3.5rem; letter-spacing: 8px; margin-bottom: 5px; color: #fff; }
+        header p { opacity: 0.6; margin-bottom: 50px; font-weight: 300; }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+        }
+
+        .glass-card {
+            background: var(--glass-bg);
+            backdrop-filter: blur(15px);
+            -webkit-backdrop-filter: blur(15px);
+            border: 1px solid var(--glass-border);
+            border-radius: 24px;
+            padding: 40px 30px;
+            transition: all 0.4s ease;
+        }
+
+        .glass-card:hover {
+            transform: translateY(-12px);
+            border-color: var(--accent);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.5);
+        }
+
+        .card-icon { font-size: 3rem; margin-bottom: 20px; color: var(--accent); }
+        .glass-card h3 { font-size: 1.5rem; margin-bottom: 15px; }
+        .glass-card p { font-size: 0.9rem; opacity: 0.7; line-height: 1.6; margin-bottom: 30px; }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 28px;
+            background: var(--accent);
+            color: #000;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 50px;
+            transition: 0.3s;
+        }
+
+        .btn:hover { background: #fff; transform: scale(1.05); }
+
+        footer { margin-top: 80px; opacity: 0.4; font-size: 0.8rem; }
+        footer a { color: var(--accent); text-decoration: none; }
+    </style>
+</head>
+<body>
+    <div class="circle circle-1"></div>
+    <div class="circle circle-2"></div>
+    
+    <div class="container">
+        <header>
+            <h1>WHISKEY</h1>
+            <p>DEPLOYED VIA GITHUB PAGES</p>
+        </header>
+
+        <main class="grid">
+            <!-- Shaban MD -->
+            <div class="glass-card">
+                <i class="fab fa-whatsapp card-icon"></i>
+                <h3>Shaban MD</h3>
+                <p>The most stable WhatsApp userbot with multi-device support and custom commands.</p>
+                <a href="https://github.com" class="btn" target="_blank">View GitHub</a>
+            </div>
+
+            <!-- Dark Zone -->
+            <div class="glass-card">
+                <i class="fas fa-ghost card-icon"></i>
+                <h3>Dark Zone MD</h3>
+                <p>Premium dark-themed bot optimized for group security and automation speed.</p>
+                <a href="https://github.com" class="btn" target="_blank">View GitHub</a>
+            </div>
+
+            <!-- Edith -->
+            <div class="glass-card">
+                <i class="fas fa-bolt card-icon"></i>
+                <h3>Edith Bot</h3>
+                <p>Next-gen AI integration for a smarter, faster, and more responsive experience.</p>
+                <a href="https://github.com" class="btn" target="_blank">View GitHub</a>
+            </div>
+        </main>
+
+        <footer>
+            <p>Created with 🔥 | Visit <a href="https://github.com">GitHub</a> to build more</p>
+        </footer>
+    </div>
+</body>
+</html>
